@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confirmation</title>
+    <link type="image/x-icon" rel="icon" href="Image/1clinic.png">
+    <link rel="stylesheet" href="style.css">
+  
+
+</head>
+<body>
+
+<div class="confirm-container"> 
+
+  <div class="con-header">
+
+    <img src="Image/checked_img.png" alt="checked Image" height="60px" width="60px">
+
+    <div class="booking-content">
+      <div class="confirmation-message">
+        <h2>Your booking is complete</h2>
+        <p>Thank you for booking with us , </p>
+        <p style="color: crimson;"> You will soon receive an email confirmation.</p>
+      </div>
+
+      <div class="booking-id">
+        <p><b>Booking ID :</b> ABC12545</p>
+        <p><b>Date Booked :</b> Sep 5, 2025</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="appointment-box">
+    <h4>Appointment Details</h4>
+    <hr>
+
+    <div class="date">
+      <b>Thursday, Sep 15, 2023 - 10:00 AM</b>
+      <button id="addToCalendarBtn" class="calendar-button">
+        📅 Add to calendar
+      </button>
+    </div>
+
+    <p>Dr. John Smith</p>
+    <p>Dentistry </p>
+  </div>
+
+  <div class="info-box">
+
+    <div class="note-box">
+      <h4> Notes Before Your Appointment</h4>
+      <hr>
+      <ul>
+        <li>Please arrive 10 minutes early.</li>
+        <li>Bring any previous tests or scans.</li>
+        <li>Cancellations must be made 24 hours in advance.</li>
+      </ul>
+    </div>
+
+    
+
+    <div class="payment-box">
+       <h4>💳 Payment Methods</h4>
+      <hr>
+      <div class="payment-method">
+     <img src="Image/icons8-visa-50.png" alt="Visa" height="40px" width="40px">
+     <p><strong>Credit Cards:</strong> Visa</p>
+     </div>
+       <div class="payment-method">
+     <img src="Image/icons8-apple-pay-48.png" alt="PayPal" height="40px" width="40px">
+     <p><strong>Electronic Payments:</strong>  Apple Pay</p>
+     </div>
+      <div class="payment-method">
+     <img src="Image/icons8-cash-in-hand-50.png" alt="Cash" height="40px" width="40px">
+      <p><strong>Payment at Clinic:</strong> Available</p>
+     </div>
+      </div>
+      
+      <p class="provide">Your booking is complete! <a href="feedback.html">Provide Feedback </a></p>       
+           
+    <div class="rebook-button">
+      <a href="departments.html">Make a New Booking</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  document.getElementById("addToCalendarBtn").addEventListener("click", function () {
+  const calendarLink = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Clinic+Appointment&dates=20250510/20250510&details=Visit+to+Al+Shifa+Clinic+for+consultation&location=123+Main+Street,+Cairo,+Egypt";
+  window.open(calendarLink, "_blank");
+});
+</script>
+
+</body>
+</html>

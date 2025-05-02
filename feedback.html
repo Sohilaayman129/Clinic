@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Rating</title>
+    <link type="image/x-icon" rel="icon" href="Image/1clinic.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <footer class="feedback ">
+    <div class="doctors">
+        <div class="doctor-card">
+            <img src="Image/75ceouhm.png" alt="Dentist">
+            <h3>Dr. Fadi, Dentist.</h3>
+            <p>He is an excellent and very accurate doctor.<br>Comfortable experience and great treatment.</p>
+        </div>
+        <div class="doctor-card">
+            <img src="Image/j2f0aoef.png" alt="Dermatologist">
+            <h3>Dr. Nelly, Dermatology.</h3>
+            <p>He takes good care of his patients.<br>He explains the situation easily.</p>
+        </div>
+        <div class="doctor-card">
+            <img src="Image/iatoqwet.png" alt="Internal medicine">
+            <h3>Prof. Magdi, heart surgeon.</h3>
+            <p>Prof. Magdi Yacoub is a true inspiration in heart surgery and humanitarian work.</p>
+        </div>
+    </div>
+    <div class="rating">
+        <h2>Your Rating</h2>
+        <textarea class="feedback-input" placeholder="Write your feedback here..." rows="4" cols="50"></textarea>
+        <div class="stars">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+        </div>
+        <button>Send</button>
+        <p class="message"></p>
+    </div>
+</footer>
+    <script>
+        const stars = document.querySelectorAll('.stars span');
+           const button = document.querySelector('button');
+               const message = document.querySelector('.message');
+                 stars.forEach((star, index) => {
+                    star.addEventListener('click', () => {
+                      stars.forEach(s => s.classList.remove('active'));
+                for (let i = 0; i <= index; i++) {
+                   stars[i].classList.add('active');
+                 }
+             });
+           });
+
+   button.addEventListener('click', () => {
+      const feedbackText = document.querySelector('.feedback-input').value;
+        console.log("User Feedback:", feedbackText);
+           message.textContent = 'Thanks for the rating.';
+           });
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>booking</title>
+        <link type="image/x-icon" rel="icon" href="Image/1clinic.png">
+        <link rel="stylesheet" href="style.css">
+      </head>
+    <body>
+        
+        <header class="top-info">
+          <div class="info-block">💰 Fees <strong>500 EGP</strong></div>
+          <div class="info-block">⏱️ Waiting Time: <strong>30 Minutes</strong></div>
+        </header>
+        <div class="container">
+        <div class="clinic-selector">
+          <p> Choose a clinic</p>
+          <div class="tabs">
+            <button class="active">place 1</button>
+            <button> place 2</button>
+          </div>
+          <div class="clinic-details">
+            <p> place 1: place 1 information</p>
+            <p>Book now to receive the clinic's address details and phone number</p>
+          </div>
+        </div>
+      
+        <div class="appointment">
+          <h2>Choose your appointment</h2>
+          <div class="appointment-cards">
+      
+            <div class="card today">
+              <h3>Today</h3>
+              <p>From <strong>7:30 PM</strong> <br> To <strong>11:00 PM</strong></p>
+              <button class="book-btn red" onclick="goToCategory()">BOOK</button>
+            </div>
+      
+            <div class="card">
+              <h3>Tomorrow</h3>
+              <p>No Available <br> Appointments</p>
+              <button class="book-btn disabled">BOOK</button>
+            </div>
+      
+            <div class="card">
+              <h3>Sat 04/19</h3>
+              <p>No Available <br> Appointments</p>
+              <button class="book-btn disabled">BOOK</button>
+            </div>
+      
+          </div>
+          <p>Reservation required, first-come, first-served</p>
+        </div>
+      
+        <div class="pay-info">
+          <p>✅ <strong>Book online, Pay at the clinic!</strong><br>
+            Doctor requires reservation!
+          </p>
+        </div>
+      
+        <div class="about-doctor">
+          <h3>About The Doctor</h3>
+          <p>
+            .................................
+          </p>
+        </div>
+    </div>
+        <script src="booking.js"></script>
+        
+      </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Clinic departments</title>
+    <link type="image/x-icon" rel="icon" href="Image/1clinic.png">
+   <link rel="stylesheet" href="style.css">
+   <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+              
+    <div class="container">
+      <div class="header">
+        <h1>Clinic departments </h1>
+        <p>Choose the department that suits your medical needs.    </p>
+      </div>
+      
+      <div class="departments-grid">
+       
+        <div class="department-card">
+          <div class="icon-container">
+            <i data-lucide="stethoscope" class="icons"></i>
+          </div>
+          <h2>  Internal Medicine </h2>
+          <p> Comprehensive medical care for internal diseases</p>
+          <button class="view-doctors-btn"  data-dept="Internal Medicine">  Book Appoiment</button>
+        </div>
+
+        
+        <div class="department-card">
+          <div class="icon-container">
+          <i data-lucide="heart-pulse" class="icons"></i>
+
+          </div>
+          <h2> Cardiology </h2>
+          <p> Diagnosis and treatment of cardiovascular diseases </p>
+          <button class="view-doctors-btn"  data-dept="Cardiolog">Book Appoiment</button>
+        </div>
+
+        <div class="department-card">
+          <div class="icon-container">
+            <i data-lucide="brain" class="icons"></i>
+          </div>
+          <h2>Neurology </h2>
+          <p>Treatment of nervous system and brain disorders</p>
+          <button class="view-doctors-btn"  data-dept="Neurology">Book Appoiment</button>
+        </div>
+
+   
+        <div class="department-card">
+          <div class="icon-container">
+            <i data-lucide="bone" class="icons"></i>
+          </div>
+          <h2> Orthopedics </h2>
+          <p>Treatment of bone and joint injuries and diseases</p>
+          <button class="view-doctors-btn"  data-dept="Orthopedics">Book Appoiment</button>
+        </div>
+        <div class="department-card">
+          <div class="icon-container">
+            <i data-lucide="ear" class="icons"></i>
+          </div>
+          <h2>Ear, Nose and Throat </h2>
+          <p>  Hearing and upper respiratory disorders</p>
+          <button class="view-doctors-btn" data-dept="Ear_Nose_Throat"> Book Appoiment</button>
+        </div>
+ 
+  
+        <div class="department-card">
+          <div class="icon-container">
+            <i data-lucide="eye" class="icons"></i> 
+          </div>
+          <h2> ophthalmology</h2>
+          <p>Eye health care and treatment of vision problems</p>
+          <button class="view-doctors-btn" data-dept="ophthalmology">Book Appoiment</button>
+        </div>
+       
+        <div class="department-card">
+          <div class="icon-container">
+            <i data-lucide="syringe" class="icons"></i>
+          </div>
+          <h2> Surgery</h2>
+          <p> Surgical treatment for diagnosis and treatment of diseases</p>
+          <button class="view-doctors-btn" data-dept="Surgery">Book Appoiment</button>
+        </div>
+       
+        <div class="department-card">
+          <div class="icon-container">
+            <i data-lucide="scan-face" class="icons"></i>
+          </div>
+          <h2>Dermatology </h2>
+          <p> Dermatology and cosmetic treatment</p>
+          <button class="view-doctors-btn" data-dept="Dermatology"> Book Appoiment</button>
+        </div>
+       
+        <div class="department-card">
+          <div class="icon-container">
+            <i data-lucide="dna" class="icons"></i> 
+          </div>
+          <h2> Tumors</h2>
+          <p> Diagnosis and treatment of cancerous tumors</p>
+          <button class="view-doctors-btn" data-dept="Tumors"> Book Appoiment</button>
+        </div>
+
+
+      </div>
+    </div>
+
+  
+    <script>
+             
+             lucide.createIcons();
+             
+  const buttons = document.querySelectorAll('.view-doctors-btn');
+
+       buttons.forEach(button => {
+          button.addEventListener('click', () => {
+              const dept = button.dataset.dept;
+                const pageUrl = `${dept}.html`; 
+                  window.location.href = pageUrl;
+                        });
+                      });
+                      
+
+      </script>
+
+  </body>
+</html>
